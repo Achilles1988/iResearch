@@ -2,16 +2,17 @@ var express = require('express');
 
 // Root
 var app = express();
-app.listen(3005, function () {
+app.listen(3000, function () {
   console.log('app is listening at port 3005');
 });
 // app.use(app.static(__dirname + '/public'));
 
-// /test_api
-var testApi = express();
-app.use('/test_api', testApi);
+// page_turning
+var pageTurning = express();
+app.use('/page_truning', pageTurning);
 
-testApi.get('/page_truning_1', function(req, res){
+pageTurning.get('/', function(req, res){
+  console
     res.send({
       'page_info': [
         {
