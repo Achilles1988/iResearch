@@ -9,7 +9,7 @@ app.listen(3000, function () {
 
 // page_turning
 var pageTurning = express();
-app.use('/page_truning', pageTurning);
+app.use('/page_turning', pageTurning);
 
 pageTurning.get('/', function(req, res){
   console
